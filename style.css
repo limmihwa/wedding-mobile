@@ -115,6 +115,7 @@ section .bar{
 .swiper img{
     width: 100%;
     height: 750px;
+    padding: 10px;
 }
 .swiper .swiper-slide{
     display: flex;
