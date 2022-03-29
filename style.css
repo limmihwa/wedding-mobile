@@ -19,6 +19,7 @@ body{
     text-align: center;
     background-color: var(--main-color);
     max-width: 425px;
+    min-width: 390px;
     margin: 0 auto;
     background-image: url(./images/pngwing.com.png);
     background-size:500px;
@@ -281,7 +282,7 @@ section .bar{
     margin-top: 15px;
 }
 .icon-box img{
-    padding: 10px;
+    padding: 5px;
 }
 .family>h4{
     font-size: 16px;
@@ -310,8 +311,8 @@ section .bar{
     position: relative;
     text-align: center;
     width: 150px;
-    top: -290px;
-    left: 250px;
+    top: -270px;
+    left: 200px;
 }
 .family-woman>span{
     font-size: 12px;
