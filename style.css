@@ -1,14 +1,12 @@
-
 :root{
-    --main-color:#422B73;
-    --sub-color1:#DF3026;
-    --sub-color2:#008EBC;
-    --bg-color:#74D0EE;
+    --main-color:#F2ECE6;
+    --text-color:#3E1200;
+    --sub-text-color:#7C5341;
 }
-
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 ul{
     list-style-type: none;
@@ -17,202 +15,312 @@ a{
     text-decoration: none;
 }
 body{
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family:  'Noto Sans KR', sans-serif;
     text-align: center;
-    /*최대 폭 조정*/
+    background-color: var(--main-color);
     max-width: 425px;
+    min-width: 390px;
     margin: 0 auto;
-
+    background-image: url(./images/pngwing.com.png);
+    background-size:500px;
+    animation: bg 100s linear ;
 }
-section h2{
-    font-size: 18px;
-    font-family: 'Yeon Sung', cursive;    
-    color: var(--main-color);
-    font-size: 28px;
-    line-height: 40px;
-    margin-bottom: 20px;
+@keyframes bg {
+    0%{
+        background-position: 0 0;
+    }
+    20%{
+        background-position: 10px 200px;
+    }
+    40%{
+        background-position: 200px 400px;
+    }
+    60%{
+        background-position: 300px 600px;
+    }
+    80%{
+        background-position: 400px 800px;
+    }
+    100%{
+        background-position: 500px 1000px;
+    }
 }
-header{
-    background-image: url(/images/hd-bg.jpg);
-    background-color: #74D0EE;
-    background-size: cover;
-    /*vh(viewport hegiht)*/
-    height: 28vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-header .logo{
-    width: 37.33%;
-    
-}
-header h1{
-    font-family: 'Yeon Sung', cursive;    
-    font-size: 28px;
-    color: var(--main-color);
-}
-header h1 span{
-    font-size: 18px;
+section{
+    height: 812px;
 }
 #title{
-    background: #ccc;
     height: 100vh;
 }
+.title-group h1{
+    font-size: 28px;
+    font-family: 'Yeon Sung', cursive;    
+    font-weight: 400;
+    color: #3E1200;
+    margin-bottom: 10px;
+    margin-top: 55px;
+}
+.title-group h1>span{
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.title-group h3{
+    color: #7C5341;
+    font-size: 14px;
+    margin-bottom: 60px;
+    font-family: 'Yeon Sung', cursive;    
+
+}
 #title .title-photo{
-    height: 50vh;
+    height: 100vh;
 }
 #title .title-photo img{
     width: 100%;
-    height: 100%;
+    height: 574px;
     object-fit: cover;
 }
-#title .title-footer{
-    background-color: #fff;
-    height: 22vh;
+section .bar{
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.bar img{
+    width: 100px;
+}
+#invitation{
+    color: var(--text-color);
+    height: 650px;
+}
+#invitation p{
+    margin-bottom: 2em;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+}
+#invitation .report{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+#invitation .report h1{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+#invitation .report h1 span{
+    color: var(--sub-text-color);
+    font-size: 14px;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+.swiper {
+    width: 100%;
+}
+.swiper img{
+    width: 100%;
+    height: 750px;
+    padding: 10px;
+}
+.swiper .swiper-slide{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-#title .title-footer .date{
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 10px;
+.swiper-pagination-bullet{
+    width: 14px;
+    height: 14px;
+    border-radius: 20;
+    background-color: #D9B591;
+    opacity: 1;
 }
-#title .title-footer .address{
-    font-size: 16px;
-    font-weight: 300;
+.swiper-pagination-bullet-active{
+    background-color: #795530;
+    opacity: 1;
 }
-section .bar{
-    height: 40px;
-    width: 2px;
-    background-color: var(--main-color);
-    margin: 0 auto;
-    margin-bottom: 20px;
+.swiper-pagination{
+    bottom: 50px !important;
 }
-/* 초대글 영역*/
-#invitation{
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background: var(--bg-color);
-    padding-left: 48px;
-    padding-right: 48px;
-}
-#invitation p{
-    margin-bottom: 1em;
-}
-.send-msg-box{
-    display: flex;
-    margin-top: 55px;
-}
-.send-btn{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-}
-.send-btn i{
-    margin-right: 10px;
-}
-/*갤러리*/
-#gallrey{
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-#gallrey > figure{
-    background-color: var(--sub-color2);
-    padding: 30px 15px;
 
-}
-#gallrey > figure>.main-photo>img{
-    width: 100%;
-    height: 278px;
-    object-fit: cover;
-    display: block;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-#gallrey > figure >.img-list{
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-#gallrey > figure >.img-list >li{
-    width: calc((100%-30px)/4);
-    height: 60px;
-}
-#gallrey > figure >.img-list >li > a > img{
-    width: 96%;
-    height: 60px;
-    object-fit: cover;
-}
 #location{
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background: var(--bg-color);
+    margin: 0 auto;
+    text-align: center;
 }
-.map{
+.location-icon{
+    margin-top: 50px;
     margin-bottom: 20px;
 }
-#congrat{
-    padding-top: 50px;
-    padding-bottom: 50px;
+.location-place{
+    color: var(--text-color);
+    margin-bottom: 15px;
 }
-.contact-box-wrap{
-    display: flex;
-    margin-bottom: 50px;
+#location .map iframe{
+    width: 100%;
+    margin-bottom: 20px;
 }
-.contact-box{
-    flex: 1;
-    padding-top: 23px;
-    padding-bottom: 23px;
-    border-radius: 20px;
-    margin-right: 5px;
-    margin-left: 5px;
+.Transportation{
+    text-align: left;
+    padding: 10px;
 }
-.contact-box-wrap >.contact-box:first-child{
-    background-color: #EC5BAC;
-}
-.contact-box-wrap>.contact-box:last-child{
-    background-color: #484DC7;
-}
-.contact-box>span{
-    color: #fff
-}
-.icon-box > img:first-child{
-    margin-right: 20px;
-}
-.icon-box{
-margin-bottom: 5px;
-}
-.sns-group{
-    display: flex;
-    background: #008EBC;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    justify-content: space-around;
-}
-.icon-link>div{
-    color: #fff;
+.Transportation h3{
+    font-size: 16px;
+    font-weight: 500;
+    color: #3E1200;
+    margin-bottom: 5px;
     margin-top: 10px;
 }
-.splash-screen.on{
-    background: var(--bg-color);
-    position: fixed;
-    z-index: 999;
-    width: 100vw;
-    height: 100vh;
-    left: 0;
-    top: 0;
+.Transportation p{
+    color: #795530;
+    margin-top: 5px;
+    font-weight: 400;
+}
+#talk-to{
+    margin-top: 100px;
+    height: 500px;
     display: flex;
     justify-content: center;
+}
+.please{
+    width: 315px;
+    height: 360px;
+    background-color: #FAF3E2;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.please h2{
+    font-size: 20px;
+    font-weight: 400;
+    color: #3E1200;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+.please .talk{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.talk p{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 3em;
+    line-height: 25px;
+    letter-spacing: 3%;
+}
+#congrat{
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 600px;
 }
-.splash-screen >img{
-    width: 140px;
-    height: 140px;
+#congrat h2{
+    font-family: 'Yeon Sung', cursive;
+    color: #3E1200;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
-.splash-screen{
+.numder{
+    margin-bottom: 50px;
+}
+.account-number{
+    width: 250px;
+    height: 35px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 80px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(250, 225, 214, 0.6);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.account-number.num1{
+    margin-right: 50px;
+}
+.account-number img{
+    width: 20px;
+    height: 20px;
+    margin-left: 80px;
+}
+.account-number-1,
+.account-number-2{
+    width: 250px;
+    height: 67px;
+    background-color: #F2ECE6;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    left: 80px;
+    top: 5px;
     display: none;
+}
+.account-number-1.on{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+.account-number-2.on{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-box-wrap{
+    display: flex;
+}
+.contact-box p{
+    font-size: 18px;
+    color: #333;
+}
+.contact-box span{
+    font-size: 14px;
+    margin-right: 5px;
+}
+.contact-box-wrap>.contact-box{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.icon-box{
+    margin-top: 15px;
+}
+.icon-box img{
+    padding: 5px;
+}
+.family>h4{
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 50px;
+}
+.family-man{
+    text-align: center;
+    width: 150px;
+    margin-left: 40px;
+}
+.family-man>span{
+    font-size: 12px;
+}
+.family-man .contact-box>img{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.family-man .contact-box{
+    margin-top: 20px;
+}
+
+
+.family-woman{
+    position: relative;
+    text-align: center;
+    width: 150px;
+    top: -270px;
+    left: 200px;
+}
+.family-woman>span{
+    font-size: 12px;
+}
+.family-woman .contact-box>img{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.family-woman .contact-box{
+    margin-top: 20px;
 }
