@@ -22,7 +22,7 @@ body{
     margin: 0 auto;
     background-image: url(./images/pngwing.com.png);
     background-size:500px;
-    animation: bg 60s linear ;
+    animation: bg 600s linear ;
 }
 @keyframes bg {
     0%{
